@@ -26,8 +26,8 @@
 			"type": "image/png"
 		}
 	],
-	"name" : "Dyxer Team",
-	"short_name" : "Dyxer Team",
+	"name" : "Brexy",
+	"short_name" : "Brexy",
 	"description" : "El tiempo de cambiar es ahora",
 	"start_url" : "./",
 	"scope" : "./",
