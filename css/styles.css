@@ -55,9 +55,7 @@ body{
 	font-family: 'Raleway', sans-serif;
 
 }
-a{
-	cursor: url(../images/aero2.cur), default;
-}
+
 .banner{
 	width: 100%;
 	height: 100vh;
@@ -206,24 +204,105 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000a0f', end
 .solicitud a:link{
 	font-size: 24px;
 	font-weight: 700;
-	color: var(--ctext1);
+	color: var(--cred);
 	text-decoration: none;
-	border: 2px solid transparent;
-	-moz-border-image: -moz-linear-gradient(left, var(--cblue) 0%, var(--cpink) 100%);
-	-webkit-border-image: -webkit-linear-gradient(left, var(--cblue) 0%, var(--cpink) 100%);
-	border-image: linear-gradient(to right, var(--cblue) 0%, var(--cpink) 100%);
-	border-image-slice: 1;
 	padding: 20px 90px;
-	border-radius: 10px;
-	
-	
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	transition: all .5s;
 }
 .solicitud a:visited{
-	
-	color: var(--ctext1);
-	
-	
+	color: var(--cred);
 }
+
+.solicitud a:hover{
+	background: var(--cred);
+	color: var(--ctext1);
+	box-shadow: 0 0 20px var(--cred), 0 0 50px var(--cred), 0 0 100px var(--cred);
+	transition: all .5s;
+}
+
+.solicitud a span{
+	position: absolute;
+	display: block;
+}
+
+.solicitud a span:nth-child(1){
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, var(--cred));
+	animation: line1 1s linear infinite;
+}
+@keyframes line1{
+	0%{
+		left: -100%;
+	}
+	50%, 100%{
+		left: 100%;
+	}
+}
+.solicitud a span:nth-child(2){
+	right: 0;
+	top: -100%;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, var(--cred));
+	animation: line2 1s linear infinite;
+	animation-delay: .25s;
+}
+@keyframes line2{
+	0%{
+		top: -100%;
+	}
+	50%, 100%{
+		top: 100%;
+	}
+}
+.solicitud a span:nth-child(3){
+	right: -100%;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, var(--cred));
+	animation: line3 1s linear infinite;
+	animation-delay: .5s;
+}
+@keyframes line3{
+	0%{
+		right: -100%;
+	}
+	50%, 100%{
+		right: 100%;
+	}
+}
+.solicitud a span:nth-child(4){
+	bottom: -100%;
+	left: 0;
+	height: 100%;
+	width: 2px;
+	background: linear-gradient(360deg, transparent, var(--cred));
+	animation: line4 1s linear infinite;
+	animation-delay: .75s;
+}
+@keyframes line4{
+	0%{
+		bottom: -100%;
+	}
+	50%, 100%{
+		bottom: 100%;
+	}
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -466,7 +545,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000a0f', end
 
 
 
-/* ------ seccion betas ----- */
+/* ------ seccion seeker ----- */
 
 
 .banner-seeker{
